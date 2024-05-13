@@ -70,7 +70,6 @@ function clickGauche() {
 		imgSlide.src = "./assets/images/slideshow/" + slides[index].image;
 		tagLineSlide.innerHTML = slides[index].tagLine;
 		arrayDots[index].classList.add("dot_selected");
-		console.log("Flèche gauche cliquée");
 	});
 }
 clickGauche();
@@ -92,7 +91,6 @@ function clickDroit() {
 		imgSlide.src = "./assets/images/slideshow/" + slides[index].image;
 		tagLineSlide.innerHTML = slides[index].tagLine;
 		arrayDots[index].classList.add("dot_selected");
-		console.log("Flèche droite cliquée");
 	});
 }
 clickDroit();
