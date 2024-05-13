@@ -51,3 +51,39 @@ function displayDots() {
 }
 displayDots();
 // FIN ETAPE 3
+
+// ETAPE 4
+// Fonction pour gérer le clique gauche
+function clickGauche() {
+	const imgSlide = document.querySelector(".banner-img");
+	const tagLineSlide = document.querySelector("#banner p")
+	let index = 0;
+	arrowLeft.addEventListener("click", () => {
+		const arrayDots = document.querySelectorAll(".dots .dot");
+		arrayDots[index].classList.remove("dot_selected");
+		index--;
+		imgSlide.src = "./assets/images/slideshow/" + slides[index].image;
+		tagLineSlide.innerHTML = slides[index].tagLine;
+		arrayDots[index].classList.add("dot_selected");
+		console.log("Flèche gauche cliquée");
+	});
+}
+clickGauche();
+
+// Fonction pour gérer le clique droit
+function clickDroit() {
+	const imgSlide = document.querySelector(".banner-img");
+	const tagLineSlide = document.querySelector("#banner p")
+	let index = 0;
+	arrowRight.addEventListener("click", () => {
+		const arrayDots = document.querySelectorAll(".dots .dot");
+		arrayDots[index].classList.remove("dot_selected");
+		index++;
+		imgSlide.src = "./assets/images/slideshow/" + slides[index].image;
+		tagLineSlide.innerHTML = slides[index].tagLine;
+		arrayDots[index].classList.add("dot_selected");
+		console.log("Flèche droite cliquée");
+	});
+}
+clickDroit();
+// FIN ETAPE 4
