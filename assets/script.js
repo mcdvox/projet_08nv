@@ -16,3 +16,18 @@ const slides = [
 		"tagLine":"Autocollants <span>avec découpe laser sur mesure</span>"
 	}
 ]
+
+// Déclaration des flèches du carrousel
+const arrowLeft = document.querySelector(".arrow_left"); // Déclaration de la constante arrow_left.
+const arrowRight = document.querySelector(".arrow_right"); // Déclaration de la constante arrow_right.
+console.log(arrowLeft, arrowRight); // Affichage dans la console des valeurs des variables arrowLeft et arrowRight.
+
+// Evènement du clique Gauche
+arrowLeft.addEventListener("click", function() { // Ecoute de l'évènement click gauche.
+	console.log("Flèche gauche cliquée"); // Affichage dans la console "Flèche gauche cliquée".
+});
+
+// Evènement du clique Droit
+arrowRight.addEventListener("click", function() { // Ecoute de l'évènement click droit.
+	console.log("Flèche droite cliquée"); // Affichage dans la console "Flèche droite cliquée".
+});
