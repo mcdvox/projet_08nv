@@ -62,6 +62,11 @@ function clickGauche() {
 		const arrayDots = document.querySelectorAll(".dots .dot");
 		arrayDots[index].classList.remove("dot_selected");
 		index--;
+		// ETAPE 5
+		if (index < 0) {
+			index = slides.length - 1;
+		}
+		// FIN ETAPE 5
 		imgSlide.src = "./assets/images/slideshow/" + slides[index].image;
 		tagLineSlide.innerHTML = slides[index].tagLine;
 		arrayDots[index].classList.add("dot_selected");
@@ -79,6 +84,11 @@ function clickDroit() {
 		const arrayDots = document.querySelectorAll(".dots .dot");
 		arrayDots[index].classList.remove("dot_selected");
 		index++;
+		// ETAPE 5
+		if (index > slides.length - 1) {
+			index = 0;
+		}
+		// FIN ETAPE 5
 		imgSlide.src = "./assets/images/slideshow/" + slides[index].image;
 		tagLineSlide.innerHTML = slides[index].tagLine;
 		arrayDots[index].classList.add("dot_selected");
