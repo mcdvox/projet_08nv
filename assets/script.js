@@ -17,6 +17,7 @@ const slides = [
 	}
 ]
 
+// ETAPE 2
 // Déclaration des flèches du carrousel
 const arrowLeft = document.querySelector(".arrow_left"); // Déclaration de la constante arrow_left.
 const arrowRight = document.querySelector(".arrow_right"); // Déclaration de la constante arrow_right.
@@ -31,3 +32,22 @@ arrowLeft.addEventListener("click", function() { // Ecoute de l'évènement clic
 arrowRight.addEventListener("click", function() { // Ecoute de l'évènement click droit.
 	console.log("Flèche droite cliquée"); // Affichage dans la console "Flèche droite cliquée".
 });
+// FIN ETAPE 2
+
+// ETAPE 3
+// Affichage des données de slide dans la console
+console.log(slides);
+
+// Fonction pour afficher des points représentant chaque image dans la présentation.
+function displayDots() {
+	const dots = document.querySelector(".dots"); // Déclaration de l'élément dots.
+	let index = 0;
+	for (let i = 0; i < slides.length; i++) {
+		const dot = document.createElement("div");
+		dot.classList.add("dot");
+		dots.appendChild(dot);
+		if (i == index) dot.classList.add("dot_selected");
+	}
+}
+displayDots();
+// FIN ETAPE 3
